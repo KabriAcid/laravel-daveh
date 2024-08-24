@@ -1,7 +1,7 @@
 <x-layout>
     <h1>New Product</h1>
 
-    <form action="" method="post">
+    <form action="{{ route('products.store') }}" method="post">
         <!-- Name -->
         <div>
             <label for="">Name</label>
