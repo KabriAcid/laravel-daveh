@@ -2,6 +2,7 @@
     <h1>New Product</h1>
 
     <form action="{{ route('products.store') }}" method="post">
+        @crsf;
         <!-- Name -->
         <div>
             <label for="">Name</label>
