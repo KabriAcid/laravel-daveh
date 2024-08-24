@@ -19,5 +19,6 @@ class ProductController extends Controller
         $product->size = $request->size;
 
         $product->save();
+        return redirect()->route('products.index');
     }
 }
