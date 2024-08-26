@@ -19,6 +19,6 @@
             <input type="text" name="size">
         </div>
         <!-- Button -->
-         <button>Save</button>
+        <button>Save</button>
     </form>
 </x-layout>
