@@ -26,8 +26,9 @@ class ProductController extends Controller
 
         return redirect()->route('products.index');
     }
-    public function show(string $id){
+    public function show(string $id)
+    {
         $product = Product::find($id);
-        return view('products.show', compact($product));
+        return view('products.show', compact('product'));
     }
 }
