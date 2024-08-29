@@ -8,4 +8,5 @@
     <p>{{ $product->description }}</p>
     <p>{{ $product->size }}</p>
     @endforeach
+    
 </x-layout>
