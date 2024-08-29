@@ -13,17 +13,17 @@
         <!-- Name -->
         <div>
             <label for="">Name</label>
-            <input type="text" name="name">
+            <input type="text" value="{{ old('name')}}" name="name">
         </div>
         <!-- Description -->
         <div>
             <label for="">Description</label>
-            <textarea name="description" id=""></textarea>
+            <textarea name="description" value="{{ old('description')}}" id=""></textarea>
         </div>
         <!-- Size -->
         <div>
             <label for="">Size</label>
-            <input type="number" name="size">
+            <input type="number" value="{{ old('size')}}" name="size">
         </div>
         <!-- Button -->
         <button>Save</button>
