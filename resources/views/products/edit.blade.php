@@ -5,6 +5,7 @@
     
     {{-- Form --}}
     <form action="" method="post">
-      <x-products.form/>
-    </form>    
+      <x-products.form :product="$product" />
+    </form>
+
 </x-layout>
