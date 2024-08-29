@@ -22,7 +22,9 @@
 </head>
 
 <body class="bg-gray-100" style="font-family: Lato;">
-
+    @if (session('status'))
+        <div>{{ session("status") }}</div>
+    @endif
    {{ $slot }}
 
 </body>

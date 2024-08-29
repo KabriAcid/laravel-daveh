@@ -7,5 +7,6 @@
     <form action="{{route("products.destroy", $product)}}">
         @csrf
         @method('DELETE')
+        <button>Delete</button>
     </form>
 </x-layout>

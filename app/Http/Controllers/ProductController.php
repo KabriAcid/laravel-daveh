@@ -35,6 +35,6 @@ class ProductController extends Controller
     }
     public function destory(Product $product){
         $product->delete();
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')->with('status', 'Product Deleted');
     }
 }
