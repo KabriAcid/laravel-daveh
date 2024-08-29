@@ -4,22 +4,25 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
 
-Route::controller(ProductController::class)->group(function (){
+Route::controller(ProductController::class)
+    ->prefix('products')
+    ->name('products.')
+    ->group(function (){
 
     Route::view('/', 'home');
     
-    Route::get('/products')->name('products.index');
+    Route::get('/products')->name('index');
     
-    Route::get('/products/create')->name('products.create');
+    Route::get('/create')->name('create');
     
-    Route::post('/products/store')->name('products.store');
+    Route::post('/store')->name('store');
     
-    Route::get('/products/{product}')->name('products.show');
+    Route::get('/{product}')->name('show');
     
-    Route::get('/products/{product}/edit')->name('products.edit');
+    Route::get('/{product}/edit')->name('edit');
     
-    Route::patch('/products/{product}')->name('products.update');
+    Route::patch('/{product}')->name('update');
     
-    Route::delete('/products/{product}')->name('products.destroy');
+    Route::delete('/{product}')->name('destroy');
     
 });
