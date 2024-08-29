@@ -4,7 +4,7 @@
     <x-errors/>
     
     {{-- Form --}}
-    <form action="{{ route('products.store') }}" method="post">
+    <form action="" method="post">
       <x-products.form/>
     </form>    
 </x-layout>
