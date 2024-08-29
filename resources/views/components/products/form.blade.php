@@ -1,3 +1,18 @@
+@csrf
+<!-- Name -->
 <div>
-    <!-- Waste no more time arguing what a good man should be, be one. - Marcus Aurelius -->
+    <label for="">Name</label>
+    <input type="text" value="{{ old('name')}}" name="name">
 </div>
+<!-- Description -->
+<div>
+    <label for="">Description</label>
+    <textarea name="description" value="{{ old('description')}}" id=""></textarea>
+</div>
+<!-- Size -->
+<div>
+    <label for="">Size</label>
+    <input type="number" value="{{ old('size')}}" name="size">
+</div>
+<!-- Button -->
+<button>Save</button>
