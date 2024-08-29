@@ -18,12 +18,9 @@ class ProductController extends Controller
     }
     public function store(SaveProductRequest $request)
     {
-        $request->validate([
-           
-        ]);
-        Product::create($request->input());
+        $product = Product::create($request->validated());
 
-        return redirect()->route('products.index');
+        return redirect()->route('products.show', $product);
     }
     public function show(Product $product)
     {
@@ -32,7 +29,12 @@ class ProductController extends Controller
     public function edit(Product $product){
         return view('products.edit', compact('product'));
     }
-    public function update(Product $product, Request $request){
-
+    public function update(Product $product, SaveProductRequest $request){
+        $product->update($request->validated());
+        return redirect()->route('products.show', $product);
+    }
+    public function destory(Product $product){
+        $product->delete();
+        return redirect()->route('products.index');
     }
 }
