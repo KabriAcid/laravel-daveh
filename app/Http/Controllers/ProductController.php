@@ -26,7 +26,8 @@ class ProductController extends Controller
 
         return redirect()->route('products.index');
     }
-    public function show(){
-        return view('');
+    public function show(string $id){
+        dd($id);
+        return view('products.show');
     }
 }
