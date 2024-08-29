@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SaveProductRequest;
-use Illuminate\Http\Request;
 use App\Models\Product;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        return view('products.index', ['products' => Product::all()]);
+        return view('products.index', ['products' => Product::paginate(3)]);
     }
     public function create()
     {
@@ -20,7 +19,7 @@ class ProductController extends Controller
     {
         $product = Product::create($request->validated());
 
-        return redirect()->route('products.show', $product);
+        return redirect()->route('products.show', $product)->with('status', 'Product Created');
     }
     public function show(Product $product)
     {
@@ -31,9 +30,9 @@ class ProductController extends Controller
     }
     public function update(Product $product, SaveProductRequest $request){
         $product->update($request->validated());
-        return redirect()->route('products.show', $product);
+        return redirect()->route('products.show', $product)->with('status', 'Product Updated');
     }
-    public function destory(Product $product){
+    public function destroy(Product $product){
         $product->delete();
         return redirect()->route('products.index')->with('status', 'Product Deleted');
     }
