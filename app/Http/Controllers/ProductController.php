@@ -9,7 +9,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('products.index', ['products' => Product::paginate(3)]);
+        return view('products.index', ['products' => Product::orderBy('created_at')->paginate(3)]);
     }
     public function create()
     {

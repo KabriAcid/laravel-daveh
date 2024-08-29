@@ -9,6 +9,6 @@
     <p>{{ $product->size }}</p>
     @endforeach
 
-    {{ $products->links() }}
+    {{ $products->links('vendor.pagination.tailwind') }}
     
 </x-layout>
