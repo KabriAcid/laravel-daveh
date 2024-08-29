@@ -4,4 +4,8 @@
     <p>{{ $product->size }}</p>
 
     <a href="{{ route('products.edit', $product->id) }}">Edit</a>
+    <form action="{{route("products.destroy", $product)}}">
+        @csrf
+        @method('DELETE')
+    </form>
 </x-layout>
