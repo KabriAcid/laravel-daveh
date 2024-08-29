@@ -5,6 +5,7 @@
     
     {{-- Form --}}
     <form action="" method="post">
+        @method('PATCH')
       <x-products.form :product="$product" />
     </form>
 
