@@ -14,7 +14,7 @@
 
     <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <link rel="stylesheet" href="{{resources/css/light.min.css}}">
+    <link rel="stylesheet" href="../../css/dark.min.css">
 </head>
 
 <body class="bg-gray-100" style="font-family: Lato;">
